@@ -30,6 +30,19 @@ app.post('/tasks', async (req, res) => {
   }
 });
 
+// Get all tasks
+app.get('/tasks',async(req, res)=>{
+  try {
+    const allTasks = await pool.query(
+      'SELECT * FROM tasks ORDER BY id DESC'
+    );
+
+    res.json(allTasks.rows)
+  } catch (error) {
+    console.log(error.message)
+  }
+})
+
 app.listen(5000, () => {
   console.log('Server running on port 5000');
 });
