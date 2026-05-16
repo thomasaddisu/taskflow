@@ -58,6 +58,23 @@ app.delete('/tasks/:id', async(req, res)=>{
   }
 })
 
+// Update task (toggle completed);
+app.put('/tasks/:id',async(req, res)=>{
+  try {
+    const {id} = req.params;
+    const {completed} = req.body;
+
+    const updatedTask = await pool.query(
+      'UPDATE tasks SET completed = $1 WHERE id = $2 RETURNING *',
+      [completed, id]
+    );
+
+    res.json(updatedTask.rows[0])
+  } catch (error) {
+    console.log(error.message)
+  }
+})
+
 app.listen(5000, () => {
   console.log('Server running on port 5000');
 });
