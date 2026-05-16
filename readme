@@ -52,7 +52,7 @@ taskflow/
 ### 1. Clone repository
 
 ```bash
-git clone https://github.com/your-username/taskflow.git
+git clone https://github.com/thomasaddisu/taskflow.git
 cd taskflow
 ```
 
