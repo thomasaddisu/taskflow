@@ -1,0 +1,141 @@
+# 🚀 TaskFlow — Full Stack Task Management App
+
+TaskFlow is a modern full-stack task management application built with React, Node.js, Express, and PostgreSQL.
+
+It allows users to create, update, delete, and manage tasks with real-time synchronization between frontend, backend, and database.
+
+## ✨ Features
+
+- ➕ Create new tasks
+- 📋 View all tasks
+- ✅ Mark tasks as completed / uncompleted
+- ❌ Delete tasks
+- 🌙 Dark mode UI
+- 🎨 Modern responsive design
+- 🔐 JWT Authentication (optional upgrade)
+- ⚡ Real-time API integration
+
+## 🧱 Tech Stack
+
+### Frontend
+- React (Vite)
+- Tailwind CSS
+- Axios
+
+### Backend
+- Node.js
+- Express.js
+- PostgreSQL (Neon DB)
+
+### Database
+- PostgreSQL (cloud hosted via Neon)
+
+## 📁 Project Structure
+
+```
+taskflow/
+│
+├── client/                # Frontend (React + Vite)
+│   ├── src/
+│   └── package.json
+│
+├── server/                # Backend (Node + Express)
+│   ├── server.js
+│   ├── db.js
+│   └── package.json
+│
+└── README.md
+```
+
+## ⚙️ Installation & Setup
+
+### 1. Clone repository
+
+```bash
+git clone https://github.com/your-username/taskflow.git
+cd taskflow
+```
+
+### 2. Setup Backend
+
+```bash
+cd server
+npm install
+```
+
+Create `.env` file:
+
+```
+DATABASE_URL=your_neon_database_url
+JWT_SECRET=your_secret_key
+```
+
+Run backend:
+
+```bash
+npm start
+```
+
+Backend runs on: `http://localhost:5000`
+
+### 3. Setup Frontend
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+Frontend runs on: `http://localhost:5173`
+
+## 🔌 API Endpoints
+
+### Tasks
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/tasks` | Get all tasks |
+| POST | `/tasks` | Create new task |
+| PUT | `/tasks/:id` | Update task |
+| DELETE | `/tasks/:id` | Delete task |
+
+### Auth (if enabled)
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/register` | Register user |
+| POST | `/login` | Login user |
+
+## 🧠 What I Learned
+
+This project helped me understand:
+
+- Full-stack architecture (frontend → backend → database)
+- REST API design
+- PostgreSQL integration with Node.js
+- Authentication with JWT
+- React state management
+- Real-world deployment structure
+
+## 🚀 Future Improvements
+
+- 🔐 Refresh token authentication
+- 👥 User-specific task lists
+- 📊 Dashboard analytics
+- ☁️ Cloud deployment (Vercel + Render + Neon)
+- 📱 Mobile responsive improvements
+- 🔔 Notifications system
+
+## 📸 Screenshots
+
+Add your UI screenshots here (recommended for portfolio)
+
+## 👨‍💻 Author
+
+**Thomas Addisu**
+
+Software Engineering Student & Full Stack Developer
+
+## ⭐ Project Goal
+
+This project was built as part of my journey to become a full-stack developer, focusing on real-world production architecture and deployment-ready applications.
