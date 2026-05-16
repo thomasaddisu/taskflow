@@ -1,15 +1,35 @@
 const express = require('express');
 const cors = require('cors');
+const pool = require('./db');
 
 const app = express();
 
-app.use(cors());  //cross-origin requests. CORS is middleware that allows frontend and backend from different origins to communicate.
+app.use(cors());
 app.use(express.json());
 
-app.get('/',(req, res)=>{
-  res.send('Home page of our taskflow webapp')
-})
+app.get('/', async (req, res) => {
+//   const result = await pool.query('SELECT NOW()');
 
-app.listen(5000,()=>{
-  console.log('Server running on port 5000')
-})
+  res.send('Home page of TaskFlow application');
+});
+
+// CREATE TASK
+app.post('/tasks', async (req, res) => {
+  try {
+    const { title } = req.body;
+
+    const newTask = await pool.query(
+      'INSERT INTO tasks(title) VALUES($1) RETURNING *',
+      [title]
+    );
+
+    res.json(newTask.rows[0]);
+
+  } catch (error) {
+    console.log(error.message);
+  }
+});
+
+app.listen(5000, () => {
+  console.log('Server running on port 5000');
+});
