@@ -44,6 +44,9 @@ taskflow/
 │   ├── db.js
 │   └── package.json
 │
+├── screenshots/           # Project screenshots
+│   └── image.png
+│
 └── README.md
 ```
 
@@ -120,7 +123,7 @@ This project helped me understand:
 ## 🚀 Future Improvements
 
 - 🔐 Refresh token authentication
-- 👥 User-speci fic task lists
+- 👥 User-specific task lists
 - 📊 Dashboard analytics
 - ☁️ Cloud deployment (Vercel + Render + Neon)
 - 📱 Mobile responsive improvements
@@ -128,7 +131,9 @@ This project helped me understand:
 
 ## 📸 Screenshots
 
-<img src="https://github.com/thomasaddisu/taskflow/raw/main/screenshots/image.png" alt="TaskFlow Dashboard" width="800">
+![TaskFlow Dashboard](https://github.com/thomasaddisu/taskflow/raw/main/screenshots/image.png)
+
+*TaskFlow - Modern full-stack task management interface with dark mode*
 
 ## 👨‍💻 Author
 
