@@ -120,7 +120,7 @@ This project helped me understand:
 ## 🚀 Future Improvements
 
 - 🔐 Refresh token authentication
-- 👥 User-specific task lists
+- 👥 User-speci fic task lists
 - 📊 Dashboard analytics
 - ☁️ Cloud deployment (Vercel + Render + Neon)
 - 📱 Mobile responsive improvements
@@ -128,7 +128,7 @@ This project helped me understand:
 
 ## 📸 Screenshots
 
-Add your UI screenshots here (recommended for portfolio)
+![TaskFlow Screenshot](image.png)
 
 ## 👨‍💻 Author
 
